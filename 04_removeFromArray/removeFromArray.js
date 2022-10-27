@@ -1,8 +1,8 @@
 const removeFromArray = function(arr, ...value) {
 
 	for(const val of value) {
-		if(typeof val == 'number') {
-			for(let i=0;i<arr.length;i++) {	
+		for(let i=0;i<arr.length;i++) {	
+			if(typeof val == typeof arr[i]) {
 				if(arr[i] == val) {
 					arr.splice(i, 1)
 				}
@@ -10,11 +10,8 @@ const removeFromArray = function(arr, ...value) {
 		}
 	}
 
-	console.log(arr)
-
 	return arr
 };
-
 
 
 removeFromArray([1, 2, 3], "1", 3)
