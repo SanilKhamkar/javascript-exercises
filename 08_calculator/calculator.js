@@ -9,36 +9,57 @@ const subtract = function(value1, value2) {
 
 };
 
-const sum = function(value1) {
+const sum = function(value) {
+
+	let summy = 0
+
+	for(const val of value) {
+		summy += val
+	}
 	
-	return ''
+	return summy
 
 };
 
-const multiply = function(value1) {
+const multiply = function(value) {
 
-	return value1 * value2
+	let multy = 1
+
+	for(const val of value) {
+		multy *= val
+	}
+	
+	return multy
 
 };
 
 const power = function(value1, value2) {
 	
-	return Mat.pow(value1,value2)
+	return Math.pow(value1,value2)
 
 };
 
-const factorial = function(value1) {
+const factorial = function(value) {
 
-	return ''
+	if(value == 0 || value == 1) {
+		return 1
+	}
+	else {
+		for(let i=value-1;i>=1;i--) {
+			value = value*i
+		}
+	}
+
+	return value
 	
 };
 
-console.log('Addition: ',add(0,0))
-console.log('Subract: ', subtract(10,4))
-console.log('Sum of numbers: ', sum([7,11]))
-console.log('Multiplication:  ', multiply([2,4])
-console.log('Power: ', power(4,3))
-console.log('Factorial: ', factorial(0))
+add(2,6)
+subtract(10,4)
+sum([1,2,3,5,7,9])
+multiply([2,4,6,8,10,12,14])
+power(4,3)
+factorial(10)
 
 // Do not edit below this line
 module.exports = {
